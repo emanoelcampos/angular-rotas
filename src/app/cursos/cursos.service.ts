@@ -5,5 +5,18 @@ import { Injectable } from '@angular/core';
 })
 export class CursosService {
 
+  getCursos() {
+    return [
+      {
+        id: 1,
+        nome: 'Angular'
+      },
+      {
+        id: 2,
+        nome: 'Java'
+      }
+    ];
+  }
+
   constructor() { }
 }
