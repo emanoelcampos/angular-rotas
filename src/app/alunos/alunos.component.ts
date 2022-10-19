@@ -9,9 +9,12 @@ import { AlunosService } from './alunos.service';
 })
 export class AlunosComponent implements OnInit {
 
+  alunos: any = [];
+
   constructor(private alunosService: AlunosService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.alunos = this.alunosService.getAlunos();
   }
 
 }
