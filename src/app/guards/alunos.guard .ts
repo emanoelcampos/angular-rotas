@@ -3,7 +3,7 @@ import { ActivatedRouteSnapshot, CanActivateChild, RouterStateSnapshot, UrlTree 
 import { Observable } from 'rxjs';
 
 @Injectable()
-export class CursosGuard implements CanActivateChild {
+export class AlunosGuard implements CanActivateChild {
 
   constructor() { }
   canActivateChild(
