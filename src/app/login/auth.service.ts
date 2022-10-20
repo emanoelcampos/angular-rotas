@@ -3,9 +3,7 @@ import { Router } from '@angular/router';
 
 import { Usuario } from './usuario';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class AuthService {
 
   private usuarioAutenticado: boolean = false;
@@ -32,5 +30,9 @@ export class AuthService {
 
       this.mostrarMenuEmitter.emit(false);
     }
+  }
+
+  usuarioEstaAutenticado() {
+    return this.usuarioAutenticado;
   }
 }
