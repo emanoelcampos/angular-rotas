@@ -10,7 +10,7 @@ import { Usuario } from './usuario';
 })
 export class LoginComponent implements OnInit {
 
-  private usuario: Usuario;
+  usuario: Usuario;
 
   constructor(
     private authService: AuthService
@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   }
 
   fazerLogin() {
-
+    this.authService.fazerLogin(this.usuario);
   }
 
 }
