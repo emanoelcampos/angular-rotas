@@ -20,8 +20,8 @@ const routes: Routes = [
     path: 'alunos',
     loadChildren: () => import('./alunos/alunos.module')
     .then(mod => mod.AlunosModule),
-    canActivate: [AuthGuard],
-    canActivateChild: [AlunosGuard]
+    canActivate: [AuthGuard]//,
+    //canActivateChild: [AlunosGuard]
   },
   {
     path: 'login',
