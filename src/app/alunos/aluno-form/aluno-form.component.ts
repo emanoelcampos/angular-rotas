@@ -1,4 +1,4 @@
-import { Subscription } from 'rxjs';
+import { of, Subscription } from 'rxjs';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
@@ -13,6 +13,7 @@ export class AlunoFormComponent implements OnInit, OnDestroy {
 
   aluno: any = {};
   inscricao: Subscription;
+  private formMudou : boolean = false;
 
   constructor(
     private alunosService: AlunosService,
@@ -37,5 +38,21 @@ export class AlunoFormComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.inscricao.unsubscribe();
+  }
+
+  onInput() {
+    this.formMudou = true;
+    console.log('mudou')
+  }
+
+  podeMudarRota() {
+    if (this.formMudou) {
+      confirm('Tem certeza que deseja sair dessa página?')
+    }
+    return true;
+  }
+
+  podeDesativar(){
+    return this.podeMudarRota();
   }
 }
