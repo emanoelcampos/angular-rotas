@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './login/auth.service';
-import { AuthGaurd } from './guards/auth.gaurd';
+import { AuthGuard } from './guards/auth.guard';
 import { CursosGuard } from './guards/cursos.guard';
 
 
@@ -26,7 +26,7 @@ import { CursosGuard } from './guards/cursos.guard';
   ],
   providers: [
     AuthService,
-    AuthGaurd,
+    AuthGuard,
     CursosGuard,
     AlunosGuard
   ],
